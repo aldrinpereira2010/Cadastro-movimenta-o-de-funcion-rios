@@ -130,7 +130,6 @@ def calcular_media_salarial():
     conn = get_conn()
     cur = conn.cursor()
 
-    # AVG() calcula a média. COALESCE trata o caso de não haver funcionários (retorna 0.0)
     cur.execute("SELECT COALESCE(AVG(salario), 0.0), COUNT(id) FROM funcionarios;")
     resultado = cur.fetchone()
     conn.close()
@@ -169,7 +168,7 @@ def menu():
         else:
             print("Opção inválida. Tente novamente.")
 
-# --- Ponto de entrada do script ---
+
 if __name__ == "__main__":
-    create_db()  # Garante que o banco e a tabela existam
-    menu()       # Inicia o menu principal
+    create_db()  
+    menu()
