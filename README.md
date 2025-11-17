@@ -21,7 +21,7 @@ Como Usar
 3.  Navegue até o diretório onde você salvou o arquivo.
 4.  Execute o script:
 
-    ```bash
+    ```
     python funcionarios.py
     ```
 
